@@ -34,7 +34,7 @@ body {
     color: rgb(var(--foreground-rgb));
     background: rgb(240, 236, 232);
     max-height: fit-content;
-    font-family: 'MarkForMC';
+    font-family: 'MarkForMC', sans-serif;
 }
 
 p {
@@ -103,7 +103,7 @@ iframe {
     background-color: #fff !important;
     color: #111 !important;
     text-transform: none !important;
-    font-family: 'MarkForMC-Medium' !important;
+    font-family: 'MarkForMC-Medium', sans-serif !important;
 }
 
 .connect-form__button {
@@ -115,7 +115,7 @@ iframe {
     font-size: 14px !important;
     line-height: 24px !important;
     text-transform: none !important;
-    font-family: 'MarkForMC-Medium' !important;
+    font-family: 'MarkForMC-Medium', sans-serif !important;
 }
 /* -------------modal-dialog---------------- */
 .modal-dialog-parent {
@@ -158,7 +158,7 @@ iframe {
     padding: 10px 24px !important;
     color: #ffffff !important;
     text-transform: none !important;
-    font-family: 'MarkForMC-Medium' !important;
+    font-family: 'MarkForMC-Medium', sans-serif !important;
     font-size: 16px !important;
     line-height: 24px !important;
     font-weight: 500 !important;
@@ -171,7 +171,7 @@ iframe {
     color: #cf4500 !important;
     border-color: #cf4500 !important;
     text-transform: none !important;
-    font-family: MarkForMC-Medium !important;
+    font-family: 'MarkForMC-Medium', sans-serif !important;
     font-size: 16px !important;
     line-height: 24px !important;
     font-weight: 500 !important;
