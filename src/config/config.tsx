@@ -54,8 +54,8 @@ export const STEPS = [
                 Now that you have a Customer ID, the next step is to generate a
                 Connect URL you would typically share with your end users. From
                 that, they can start a Connect session & grant Mastercard Open
-                Banking access to their accounts and financial data. You can omit
-                the <b className='text-[14px]'>applicationId</b> from the
+                Banking access to their accounts and financial data. You can
+                omit the <b className='text-[14px]'>applicationId</b> from the
                 request <br /> when generating test customers.
             </div>
         ),

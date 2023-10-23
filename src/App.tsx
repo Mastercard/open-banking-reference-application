@@ -15,7 +15,7 @@ export default function App() {
         <ThemeProvider theme={theme}>
             <Header />
             <Modal />
-            <main className='min-h-fit items-center justify-between align-middle mt-[40px] pt-12 pb-8 pl-24 pr-24'>
+            <main className='min-h-fit items-center justify-between align-middle mt-[40px] pt-12 pb-8 lg:px-24 sm:px-10'>
                 <ConnectForm />
             </main>
         </ThemeProvider>

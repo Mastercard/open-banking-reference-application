@@ -60,7 +60,7 @@ export default function Header() {
                         <Typography variant='h6'>Open Banking</Typography>
                     </Box>
                     <a
-                        href='https://developer.mastercard.com'
+                        href='https://github.com/Mastercard/open-banking-reference-application'
                         target='_blank'
                         rel='noreferrer'
                         style={{ marginTop: '10px' }}

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import { Box, Link, Stack, Typography } from '@mui/material';
@@ -12,7 +12,7 @@ export default function Modal() {
     };
 
     return (
-        <>
+        <React.Fragment>
             <Dialog
                 open={open}
                 aria-labelledby='alert-dialog-title'
@@ -28,7 +28,7 @@ export default function Modal() {
                                 src='/mc_symbol.svg'
                                 alt='Open Banking'
                                 className='w-[44px]'
-                            />
+                            />{' '}
                             developers
                         </Typography>
                         <Box>
@@ -96,6 +96,6 @@ export default function Modal() {
                     </Box>
                 </Box>
             </Dialog>
-        </>
+        </React.Fragment>
     );
 }

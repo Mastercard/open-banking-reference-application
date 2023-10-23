@@ -1,10 +1,11 @@
 import { Grid, Stack, Typography } from '@mui/material';
 import SandBoxTip from '../SandBoxTip/SandBoxTip';
+import React from 'react';
 export default function ConnectInitiation({
     user: { username, createdDate },
 }: any) {
     return (
-        <>
+        <React.Fragment>
             <Grid
                 justifyContent='space-between'
                 container
@@ -40,6 +41,6 @@ export default function ConnectInitiation({
                 </Grid>
             </Grid>
             <SandBoxTip />
-        </>
+        </React.Fragment>
     );
 }

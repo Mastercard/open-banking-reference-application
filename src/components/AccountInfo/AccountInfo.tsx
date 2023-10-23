@@ -9,7 +9,7 @@ import {
     Typography,
 } from '@mui/material';
 import ExternalIcon from '../../utils/external-icon';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { ACHTEXT, AVAILBTEXT } from '../../config/config';
 export default function AccountInfo({ accountData }: any) {
     // State to manage the selected account
@@ -25,7 +25,7 @@ export default function AccountInfo({ accountData }: any) {
         setAccount(accountElem);
     };
     return (
-        <>
+        <React.Fragment>
             <Grid
                 justifyContent='space-between'
                 container
@@ -296,6 +296,6 @@ export default function AccountInfo({ accountData }: any) {
                     </Stack>
                 </Grid>
             </Grid>
-        </>
+        </React.Fragment>
     );
 }

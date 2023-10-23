@@ -328,7 +328,7 @@ export default function ConnectForm() {
             setExpanded(isExpanded ? panel : false);
         };
     return (
-        <>
+        <React.Fragment>
             <Grid container spacing={4}>
                 <Grid item xs={4}>
                     <Box sx={{ maxWidth: 600, height: 500 }}>
@@ -502,10 +502,10 @@ export default function ConnectForm() {
                                                         accord.id
                                                     ) && (
                                                         <Typography
+                                                            className='float-right'
+                                                            variant='body2'
                                                             fontWeight='Bold'
                                                             sx={{
-                                                                width: '33%',
-                                                                flexShrink: 0,
                                                                 color: '#2D7763 !important',
                                                             }}
                                                         >
@@ -574,6 +574,6 @@ export default function ConnectForm() {
                     {errorMessage}
                 </Alert>
             </Snackbar>
-        </>
+        </React.Fragment>
     );
 }
