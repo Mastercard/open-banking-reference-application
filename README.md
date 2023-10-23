@@ -1,7 +1,6 @@
 # Open Banking Reference Application
 
 [![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-orange.svg)](https://sonarcloud.io/summary/new_code?id=Mastercard_open-banking-reference-application)
-[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=Mastercard_open-banking-reference-application)](https://sonarcloud.io/summary/new_code?id=Mastercard_open-banking-reference-application)
 
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Mastercard_open-banking-reference-application&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Mastercard_open-banking-reference-application)
