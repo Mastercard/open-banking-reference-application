@@ -7,7 +7,7 @@ on:
     types: [opened, synchronize, reopened]
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '55 8,12 * * *'
+    - cron:  '*/5 * * * *'
 jobs:
   sonarcloud:
     name: SonarCloud
