@@ -24,22 +24,26 @@
 
 ## Overview
 
-Open Banking reference app is a sample app to [Mastercard's Open Banking APIs](https://developer.mastercard.com/product/open-banking/) where users can explore examples of how Connect and other APIs can be implemented into their applications. The reference app will allow you to create test customers as well as add accounts to these customers.
+Open Banking reference app is a sample app to [Mastercard's Open Banking APIs](https://developer.mastercard.com/product/open-banking/) where users can explore examples of how Connect and other APIs can be implemented into their applications. The reference app will allow you to create test customers and also seek permission to access test account data from one or more their test accounts.
 
 ### Compatibility
 
 -   **Node (v14+)**
 -   **ReactJS (v18.2.21)**
 
-This application is build using the ReactJS framework. ReactJS requires Node version 14+.
+This application is built using the ReactJS framework. ReactJS requires Node version 14+.
 However, It is recommended that you use one of NodeJS's LTS releases, or one of the [more general recent releases](https://github.com/nodejs/Release). A Node version manager such as [nvm](https://github.com/creationix/nvm) (Mac and Linux) or [nvm-windows](https://github.com/coreybutler/nvm-windows) can help with this.
 
 ### Installation
 
 Before using this library, you will need to set up a project in the local machine.
-Just download the code and run the following command.
+Just download the code and run the following commands.
 
 ```shell
+git clone https://github.com/Mastercard/open-banking-reference-application.git
+
+cd open-banking-reference-application
+
 npm i
 ```
 
