@@ -387,7 +387,7 @@ export default function ConnectForm() {
                                     >
                                         <Step
                                             className='!text-[16px]'
-                                            style={{ wordWrap: 'break-word' }}
+                                            style={{ wordWrap: 'break-word', color: '#111' }}
                                         >
                                             {step.description}
                                         </Step>
