@@ -35,8 +35,7 @@ export const STEPS = [
         label: 'Create your first customer',
         description: (
             <div>
-                Here, we start with creating a "testing" customer record we will
-                then use with FinBank test profiles.
+                Here, we start with creating a "testing" customer record. We will use this customer later with FinBank test profiles.
                 <br />
                 <br />
                 You can omit the <b className='text-[14px]'>
