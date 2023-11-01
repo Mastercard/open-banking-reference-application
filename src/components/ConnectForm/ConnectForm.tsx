@@ -116,6 +116,8 @@ export default function ConnectForm() {
             if (response.status === 401) {
                 const responseText = await response.text();
                 throw new Error(responseText);
+            } else if(response.status === 403) {
+                throw new Error('Make sure you are located in the US, UK or Canada.');
             } else {
                 const { message } = await response.json();
                 throw new Error(message);
