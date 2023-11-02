@@ -24,7 +24,7 @@
 
 ## Overview
 
-Open Banking reference app is a sample app to [Mastercard's Open Banking APIs](https://developer.mastercard.com/product/open-banking/) where users can explore examples of how Connect and other APIs can be implemented into their applications. The reference app will allow you to create test customers and also seek permission to access test account data from one or more their test accounts.
+Open Banking reference app is a sample app to [Mastercard's Open Banking APIs](https://developer.mastercard.com/product/open-banking/) where users can explore examples of how Connect and other APIs can be implemented into their applications. The reference app will allow you to create test customers and also seek permission to access test account data from one or more their test accounts. Please note that applications accessing the Open Banking APIs must be hosted within the United States.
 
 ### Compatibility
 
