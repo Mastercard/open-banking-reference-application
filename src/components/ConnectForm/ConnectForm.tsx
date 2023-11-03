@@ -117,7 +117,7 @@ export default function ConnectForm() {
                 const responseText = await response.text();
                 throw new Error(responseText);
             } else if(response.status === 403) {
-                throw new Error('Make sure you are located in the US, UK or Canada.');
+                throw new Error('Applications accessing the Open Banking APIs must be hosted within the United States.');
             } else {
                 const { message } = await response.json();
                 throw new Error(message);
