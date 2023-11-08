@@ -9,9 +9,7 @@ export const URL = {
     activateCustomerUrl: '/aggregation/v2/customers/testing',
     genConnectUrl: '/connect/v2/generate',
     accountInfoUrl: '/aggregation/v1/customers/<customerId>/accounts',
-    achUrl: '/aggregation/v1/customers/<customerId>/accounts/<accountId>/details',
-    mcDevPortal:
-        'https://developer.mastercard.com/open-banking-us/documentation/quick-start-guide/#2-welcome-your-first-customer',
+    achUrl: '/aggregation/v1/customers/<customerId>/accounts/<accountId>/details'
 };
 
 /* DEPOSIT ACCOUNT TYPES FOR ACH  */
@@ -36,15 +34,10 @@ export const STEPS = [
         description: (
             <div>
                 Here, we start with creating a "testing" customer record. We will use this customer later with FinBank test profiles.
-                <br />
-                <br />
-                You can omit the <b className='text-[14px]'>
-                    applicationId
-                </b>{' '}
-                from the request when generating test customers.
             </div>
         ),
         panel: 'panel0',
+        documentationLink : 'https://developer.mastercard.com/open-banking-us/documentation/quick-start-guide/#2-welcome-your-first-customer'
     },
     {
         label: 'Attach a bank account to customer',
@@ -53,29 +46,26 @@ export const STEPS = [
                 Now that you have a Customer ID, the next step is to generate a
                 Connect URL you would typically share with your end users. From
                 that, they can start a Connect session & grant Mastercard Open
-                Banking access to their accounts and financial data. You can
-                omit the <b className='text-[14px]'>applicationId</b> from the
-                request <br /> when generating test customers.
+                Banking access to their accounts and financial data.
             </div>
         ),
         panel: 'panel1',
+        documentationLink : 'https://developer.mastercard.com/open-banking-us/documentation/connect/'
     },
     {
         label: 'Pull account information',
         description: (
             <div>
-                In this first example, we retrieve the list of supported
-                financial institutions by calling{' '}
-                <b className='text-[14px]'>getInstitutions</b>.
                 <div className='mt-2'>
                     We are now interested in retrieving some of the most recent
-                    transactions. For that, we call the{' '}
-                    <b className='text-[14px]'>getAllCustomerTransactions</b>{' '}
+                    infromation about the accounts. For that, we call the{' '}
+                    <b className='text-[14px]'>Refresh Customer Accounts </b>{' '}
                     endpoint.
                 </div>
             </div>
         ),
         panel: 'panel2',
+        documentationLink : 'https://developer.mastercard.com/open-banking-us/documentation/quick-start-guide/#step-5---refresh-customer-accounts'
     },
 ];
 

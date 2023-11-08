@@ -51,7 +51,6 @@ const {
     activateCustomerUrl,
     genConnectUrl,
     accountInfoUrl,
-    mcDevPortal,
     achUrl,
 } = URL;
 
@@ -394,7 +393,7 @@ export default function ConnectForm() {
                                             {step.description}
                                         </Step>
                                         <a
-                                            href={mcDevPortal}
+                                            href={step.documentationLink}
                                             target='_blank'
                                             rel='noreferrer'
                                         >
