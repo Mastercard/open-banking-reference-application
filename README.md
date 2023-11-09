@@ -24,7 +24,7 @@
 
 ## Overview
 
-Open Banking reference app is a sample app to [Mastercard's Open Banking APIs](https://developer.mastercard.com/product/open-banking/) where users can explore examples of how Connect and other APIs can be implemented into their applications. The reference app will allow you to create test customers and also seek permission to access test account data from one or more their test accounts. Please note that applications accessing the Open Banking APIs must be hosted within the United States.
+Open Banking reference app is a sample app to [Mastercard's Open Banking APIs](https://developer.mastercard.com/product/open-banking/) where users can explore examples of how Connect and other APIs can be implemented into their applications. The reference app will allow you to create test customers and also seek permission to access test account data from one or more of their test accounts. Please note that applications accessing the Open Banking APIs must be hosted within the United States.
 
 ### Compatibility
 
@@ -36,7 +36,7 @@ However, It is recommended that you use one of NodeJS's LTS releases, or one of 
 
 ### Installation
 
-Before using this library, you will need to set up a project in the local machine.
+Before using open banking reference application, you will need to set up a project in the local machine.
 Just download the code and run the following commands.
 
 ```shell
@@ -69,6 +69,8 @@ Follow the steps mentioned in the document to [generate your credentials](https:
 -   Take a note of your Partner ID, Partner Secret and App Key. These will be required in the following sections.
 
 ### 2. Add credentials in the .env file
+
+Open banking reference application needs Sandbox API credentials in the .env file to make API calls. 
 
 -   Create the `.env` file.
     ```shell
@@ -107,7 +109,7 @@ Run the following command to execute the testcases.
 npm run test
 ```
 
-## Step to be performed for creating application build
+## Steps to be performed for creating application build
 
 This step is required only when the application needs to be deployed on the server.
 
