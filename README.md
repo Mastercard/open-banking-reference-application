@@ -24,7 +24,7 @@
 
 ## Overview
 
-Open Banking reference app is a sample app to [Mastercard's Open Banking APIs](https://developer.mastercard.com/product/open-banking/) where users can explore examples of how Connect and other APIs can be implemented into their applications. The reference app will allow you to create test customers and also seek permission to access test account data from one or more their test accounts. Please note that applications accessing the Open Banking APIs must be hosted within the United States.
+The Open Banking reference app is a sample app to [Mastercard's Open Banking APIs](https://developer.mastercard.com/product/open-banking/) where users can explore examples of how Connect and other APIs can be implemented into their applications. The reference app will allow you to create test customers and also seek permission to access test account data from one or more of their test accounts. Please note that applications accessing the Open Banking APIs must be hosted within the United States.
 
 ### Compatibility
 
@@ -32,12 +32,12 @@ Open Banking reference app is a sample app to [Mastercard's Open Banking APIs](h
 -   **ReactJS (v18.2.21)**
 
 This application is built using the ReactJS framework. ReactJS requires Node version 14+.
-However, It is recommended that you use one of NodeJS's LTS releases, or one of the [more general recent releases](https://github.com/nodejs/Release). A Node version manager such as [nvm](https://github.com/creationix/nvm) (Mac and Linux) or [nvm-windows](https://github.com/coreybutler/nvm-windows) can help with this.
+However, It is recommended that you use one of NodeJS's LTS releases or one of the [more general recent releases](https://github.com/nodejs/Release). A Node version manager such as [nvm](https://github.com/creationix/nvm) (Mac and Linux) or [nvm-windows](https://github.com/coreybutler/nvm-windows) can help with this.
 
 ### Installation
 
-Before using this library, you will need to set up a project in the local machine.
-Just download the code and run the following commands.
+Before using the open banking reference application, you will need to set up a project in the local machine.
+The following commands will help you to get the latest code and install the required dependencies on your machine.
 
 ```shell
 git clone https://github.com/Mastercard/open-banking-reference-application.git
@@ -63,12 +63,14 @@ Follow the steps mentioned in the document to [generate your credentials](https:
 
 #### Instructions to create a Mastercard Developers project:
 
--   Login to [Mastercard developers portal](https://developer.mastercard.com/product/open-banking/)
+-   Login to [Mastercard developer's portal](https://developer.mastercard.com/product/open-banking/)
 -   Log in and click the Create Project button at the top of this page
 -   Select Open Banking and follow the step-by-step instructions
--   Take a note of your Partner ID, Partner Secret and App Key. These will be required in the following sections.
+-   Take note of your Partner ID, Partner Secret and App Key. These will be required in the following sections.
 
 ### 2. Add credentials in the .env file
+
+Open banking reference application needs Sandbox API credentials added in the .env file to make the API calls. 
 
 -   Create the `.env` file.
     ```shell
@@ -92,22 +94,24 @@ npm start
 
 ### 5. Add a bank account to customer
 
-Now that you have a **Customer ID**, the next step is to add bank account.
+Now that you have a **Customer ID**, the next step is to add a bank account.
 ![add bank account page](docs/add-bank-account.png)
 
 ### 6. Pull account information
 
 ![account information page](docs/account-information.png)
 
-## Steps to run testcases
+## Steps to run test cases
 
-Run the following command to execute the testcases.
+The following command will execute the test cases and show the status of each test.
 
 ```shell
 npm run test
 ```
+![landing page](docs/test_case_result.png)
 
-## Step to be performed for creating application build
+
+## Steps to be performed for creating application build
 
 This step is required only when the application needs to be deployed on the server.
 
@@ -117,8 +121,8 @@ Run the following command to create the application build.
 npm run build
 ```
 
-Refer below code snippet for creating a [express](https://www.npmjs.com/package/express) application.
-In addition to that we are using [http-proxy-middleware](https://www.npmjs.com/package/http-proxy-middleware) for handling proxy request to open banking APIs or you can setup your own proxy server for managing CORS (cross-origin-resource-sharing).
+Refer to the below code snippet for creating an [express](https://www.npmjs.com/package/express) application.
+In addition to that we are using [http-proxy-middleware](https://www.npmjs.com/package/http-proxy-middleware) for handling proxy requests to open banking APIs or you can set up your proxy server for managing CORS (cross-origin-resource-sharing).
 
 ```
 const express = require('express');
@@ -138,3 +142,8 @@ app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
 ```
+
+## Contact Us
+Have issues or concerns regarding the application?
+Please create an issue in the GitHub and our team will try to address the issue as soon as possible. 
+
