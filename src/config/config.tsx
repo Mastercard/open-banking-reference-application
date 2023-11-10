@@ -27,7 +27,7 @@ export const REQUEST_BODY = {
     },
 };
 
-/* Stepper : All the steps and the respective text content is added here. */
+/* Stepper: All the steps and the respective text content are added here. */
 export const STEPS = [
     {
         label: 'Create your first customer',
@@ -43,9 +43,7 @@ export const STEPS = [
         label: 'Attach a bank account to customer',
         description: (
             <div>
-                Now that you have a Customer ID, the next step is to generate a
-                Connect URL you would typically share with your end users. From
-                that, they can start a Connect session & grant Mastercard Open
+                Now that you have created a customer, the next step is to generate a Connect URL. That is needed to start a Connect session and grant Mastercard Open
                 Banking access to their accounts and financial data.
             </div>
         ),
@@ -58,18 +56,18 @@ export const STEPS = [
             <div>
                 <div className='mt-2'>
                     We are now interested in retrieving some of the most recent
-                    infromation about the accounts. For that, we call the{' '}
+                    information about the accounts. For that, we call the{' '}
                     <b className='text-[14px]'>Refresh Customer Accounts </b>{' '}
                     endpoint.
                 </div>
             </div>
         ),
         panel: 'panel2',
-        documentationLink : 'https://developer.mastercard.com/open-banking-us/documentation/quick-start-guide/#step-5---refresh-customer-accounts'
+        documentationLink: 'https://developer.mastercard.com/open-banking-us/documentation/quick-start-guide/#step-5---refresh-customer-accounts'
     },
 ];
 
-/* Accordian : Accordian title and id is configured here, the content will be added at the run time */
+/* Accordion: The title is configured here, the content will be added at the run time */
 export const ACCORDIANS = [
     {
         id: 'panel0',
