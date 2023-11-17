@@ -19,14 +19,14 @@ describe('Testing SandboxTip component', () => {
     test('Sandbox tip should have email field', () => {
         render((<SandBoxTip />) as React.ReactElement);
         expect(
-            screen.getByText(/email/i, { exact: false })
+            screen.getByText(/Banking Userid/i, { exact: false })
         ).toBeInTheDocument();
     });
 
     test('Sandbox tip should have password field', () => {
         render((<SandBoxTip />) as React.ReactElement);
         expect(
-            screen.getByText(/password/i, { exact: false })
+            screen.getByText(/Banking Password/i, { exact: false })
         ).toBeInTheDocument();
     });
 });
