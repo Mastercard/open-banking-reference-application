@@ -103,7 +103,7 @@ Now that you have a **Customer ID**, the next step is to add a bank account.
 
 ## Steps to run test cases
 
-The following command will execute the test cases and show the status of each test.
+The following command will execute the test cases and show the result.
 
 ```shell
 npm run test
