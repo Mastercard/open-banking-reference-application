@@ -41,10 +41,10 @@ The following commands will help you to get the latest code and install the requ
 
 ```shell
 git clone https://github.com/Mastercard/open-banking-reference-application.git
+```
 
-cd open-banking-reference-application
-
-npm i
+```shell
+cd open-banking-reference-application && npm i
 ```
 
 ### References
@@ -144,6 +144,5 @@ app.listen(port, () => {
 ```
 
 ## Contact Us
-Have issues or concerns regarding the application?
-Please create an issue in the GitHub and our team will try to address the issue as soon as possible. 
+If you have any issues or concerns, please click [here](https://github.com/Mastercard/open-banking-reference-application/issues/new) to submit an issue and our team will get back to you as soon as possible.
 
