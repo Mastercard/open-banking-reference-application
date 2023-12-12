@@ -24,7 +24,7 @@
 
 ## Overview
 
-The Open Banking reference app is a sample app to [Mastercard's Open Banking APIs](https://developer.mastercard.com/product/open-banking/) where users can explore examples of how Connect and other APIs can be implemented into their applications. The reference app will allow you to create test customers and also seek permission to access test account data from one or more of their test accounts. Please note that applications accessing the Open Banking APIs must be hosted within the United States.
+The Mastercard Open Banking US reference app is a sample app to [Mastercard's Open Banking US APIs](https://developer.mastercard.com/product/open-banking/) where users can explore examples of how Connect and other APIs can be implemented into their applications. The reference app allows you to create test customers and also seek permission to access test account data from one or more of their test accounts. Note that applications accessing the Mastercard Open Banking US APIs must be hosted within the United States.
 
 ### Compatibility
 
@@ -32,12 +32,12 @@ The Open Banking reference app is a sample app to [Mastercard's Open Banking API
 -   **ReactJS (v18.2.21)**
 
 This application is built using the ReactJS framework. ReactJS requires Node version 14+.
-However, It is recommended that you use one of NodeJS's LTS releases or one of the [more general recent releases](https://github.com/nodejs/Release). A Node version manager such as [nvm](https://github.com/creationix/nvm) (Mac and Linux) or [nvm-windows](https://github.com/coreybutler/nvm-windows) can help with this.
+We recommend that you use one of NodeJS's LTS releases or one of the [more general recent releases](https://github.com/nodejs/Release). A Node version manager such as [nvm](https://github.com/creationix/nvm) (Mac and Linux) or [nvm-windows](https://github.com/coreybutler/nvm-windows) can help with this.
 
 ### Installation
 
-Before using the open banking reference application, you will need to set up a project in the local machine.
-The following commands will help you to get the latest code and install the required dependencies on your machine.
+Before using this reference application, you will need to set up a project in the local machine.
+The following commands will help you to get the latest code and install the required dependencies on your machine:
 
 ```shell
 git clone https://github.com/Mastercard/open-banking-reference-application.git
@@ -57,20 +57,20 @@ cd open-banking-reference-application && npm i
 
 ### 1. Generate your credentials
 
-Follow the steps mentioned in the document to [generate your credentials](https://developer.mastercard.com/open-banking-us/documentation/quick-start-guide/#1-generate-your-credentials).
+Follow the steps mentioned in the documentation to [generate your credentials](https://developer.mastercard.com/open-banking-us/documentation/quick-start-guide/#1-generate-your-credentials).
 
 ![Alt Text](https://user-images.githubusercontent.com/3964455/221236073-5661d083-0a04-4d46-9710-3c0c8c9e9a6a.gif)
 
 #### Instructions to create a Mastercard Developers project:
 
--   Login to [Mastercard developer's portal](https://developer.mastercard.com/product/open-banking/)
+-   Login to [Mastercard Developers portal](https://developer.mastercard.com/product/open-banking/)
 -   Log in and click the Create Project button at the top of this page
 -   Select Open Banking and follow the step-by-step instructions
--   Take note of your Partner ID, Partner Secret and App Key. These will be required in the following sections.
+-   Take note of your Partner ID, Partner Secret and App Key. These will be required later.
 
 ### 2. Add credentials in the .env file
 
-Open banking reference application needs Sandbox API credentials added in the .env file to make the API calls. 
+The Open Banking US reference application needs Sandbox API credentials added in the .env file to make the API calls. 
 
 -   Create the `.env` file.
     ```shell
@@ -80,7 +80,7 @@ Open banking reference application needs Sandbox API credentials added in the .e
 
 ### 3. Run application
 
-Run the following command to start the application.
+Run the following command to start the application:
 
 ```shell
 npm start
@@ -103,7 +103,7 @@ Now that you have a **Customer ID**, the next step is to add a bank account.
 
 ## Steps to run test cases
 
-The following command will execute the test cases and show the result.
+The following command will execute the test cases and show the result:
 
 ```shell
 npm run test
@@ -121,8 +121,8 @@ Run the following command to create the application build.
 npm run build
 ```
 
-Refer to the below code snippet for creating an [express](https://www.npmjs.com/package/express) application.
-In addition to that we are using [http-proxy-middleware](https://www.npmjs.com/package/http-proxy-middleware) for handling proxy requests to open banking APIs or you can set up your proxy server for managing CORS (cross-origin-resource-sharing).
+Refer to the following code snippet for creating an [express](https://www.npmjs.com/package/express) application.
+In addition to that we are using [http-proxy-middleware](https://www.npmjs.com/package/http-proxy-middleware) for handling proxy requests to Open Banking US APIs, or you can set up your proxy server for managing CORS (cross-origin-resource-sharing).
 
 ```
 const express = require('express');
