@@ -7,7 +7,7 @@ module.exports = function (app) {
     app.use(
         regions.paths,
         createProxyMiddleware({
-            target: regions.domains[regions.region],
+            target: regions.domains[regions.region] ?? regions.domains.us,
             changeOrigin: true,
             pathRewrite: regions.rewritePaths
         })
