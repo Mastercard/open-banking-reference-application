@@ -39,6 +39,7 @@ import {
     PARTNERID,
     URL,
     DEPOSIT_ACCOUNTS,
+    REGION,
 } from '../../config/config';
 import {
     generateFetchHeaders,
@@ -114,9 +115,18 @@ export default function ConnectForm() {
         if (response.status !== 200 && response.status !== 201) {
             if (response.status === 401) {
                 const responseText = await response.text();
+                if (RegExp(/Invalid Credentials/i).test(responseText)) {
+                    throw new Error(
+                        'Invalid configurations : Please verify if the appilcation is using valid partnerId, partnerSecret or region'
+                    );
+                }
                 throw new Error(responseText);
             } else if(response.status === 403) {
-                throw new Error('Applications accessing the Open Banking APIs must be hosted within the United States.');
+                throw new Error(
+                    `Applications accessing the Open Banking APIs must be hosted within the ${
+                        REGION === 'AU' ? 'Australia' : 'United States'
+                    }.`
+                );
             } else {
                 const { message } = await response.json();
                 throw new Error(message);
@@ -225,6 +235,11 @@ export default function ConnectForm() {
                 })
                 .catch((error) => {
                     console.error('error', error);
+                    if (
+                        RegExp(/Routing number not found/i).test(error.message)
+                    ) {
+                        return [];
+                    }
                     throw error;
                 });
         });
@@ -388,7 +403,10 @@ export default function ConnectForm() {
                                     >
                                         <Step
                                             className='!text-[16px]'
-                                            style={{ wordWrap: 'break-word', color: '#111' }}
+                                            style={{
+                                                wordWrap: 'break-word',
+                                                color: '#111',
+                                            }}
                                         >
                                             {step.description}
                                         </Step>
@@ -568,7 +586,7 @@ export default function ConnectForm() {
                     severity='error'
                     sx={{
                         width: '100%',
-                        backgroundColor: '#FF5555',
+                        backgroundColor: '#FF5556',
                         color: '#FFFFFF',
                     }}
                 >

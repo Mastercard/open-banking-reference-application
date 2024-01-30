@@ -1,6 +1,11 @@
-import { APP_KEY, REQUEST_BODY } from '../config/config';
+import { APP_KEY, REQUEST_BODY, REGION, REGIONS } from '../config/config';
 
 export const generateFetchHeaders = (method: string, token = '') => {
+    if (!REGIONS.includes(REGION)) {
+        throw new Error(
+            'Invalid Region: This application is supported for United States (US) and Australia (AU) region only.'
+        );
+    }
     const myHeaders = new Headers();
     myHeaders.append('Finicity-App-Key', APP_KEY);
     myHeaders.append('Content-Type', 'application/json');

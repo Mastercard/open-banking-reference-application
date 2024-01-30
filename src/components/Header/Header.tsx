@@ -57,7 +57,12 @@ export default function Header() {
                         >
                             REFERENCE APP
                         </Typography>
-                        <Typography variant='h6'>Open Banking</Typography>
+                        <Typography variant='h6'>
+                            Open Banking{' '}
+                            {process.env.REACT_APP_REGION === 'AU'
+                                ? 'Australia'
+                                : 'US'}
+                        </Typography>
                     </Box>
                     <a
                         href='https://github.com/Mastercard/open-banking-reference-application'

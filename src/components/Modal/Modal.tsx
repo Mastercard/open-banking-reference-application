@@ -1,25 +1,69 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
-import { Box, Link, Stack, Typography } from '@mui/material';
+import {
+    Dialog,
+    DialogTitle,
+    DialogContent,
+    DialogContentText,
+    Alert,
+    Box,
+    Link,
+    Stack,
+    Typography,
+} from '@mui/material';
 import ExternalIcon from '../../utils/external-icon';
+import { REGION, REGIONS } from '../../config/config';
 
 export default function Modal() {
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(REGIONS.includes(REGION));
+    const [openAlert] = useState(!REGIONS.includes(REGION));
 
     const handleClose = () => {
         setOpen(false);
     };
 
     return (
+        <React.Fragment>
         <Dialog
+                open={openAlert}
+                onClose={handleClose}
+                aria-labelledby='alert-dialog-title'
+                aria-describedby='alert-dialog-description'
+            >
+                <DialogTitle
+                    id='alert-dialog-title'
+                    sx={{
+                        color: '#EB001B',
+                    }}
+                >
+                    Invalid Configuration
+                </DialogTitle>
+                <DialogContent>
+                    <DialogContentText id='alert-dialog-description'>
+                        <Alert
+                            severity='error'
+                            sx={{
+                                color: '#EB001B',
+                            }}
+                        >
+                            Looks like you have configured incorrect region. At
+                            present, the application supports United States (US)
+                            and Australia (AU) region only.
+                        </Alert>
+                    </DialogContentText>
+                </DialogContent>
+            </Dialog>
+            <Dialog
             open={open}
             aria-labelledby='alert-dialog-title'
             aria-describedby='alert-dialog-description'
         >
             <Box className='modal-dialog-parent'>
                 <Box className='modal-dialog-content'>
-                    <Typography variant='h6' className='flex !font-semibold'>
+                        <Typography
+                            variant='h6'
+                            className='flex !font-semibold'
+                        >
                         <img
                             src='/mc_symbol.svg'
                             alt='Open Banking'
@@ -92,5 +136,6 @@ export default function Modal() {
                 </Box>
             </Box>
         </Dialog>
+        </React.Fragment>
     );
 }

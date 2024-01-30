@@ -2,18 +2,26 @@
 export const PARTNERID = process.env.REACT_APP_PARTNERID ?? '';
 export const PARTNERSECRET = process.env.REACT_APP_SECRET ?? '';
 export const APP_KEY = process.env.REACT_APP_KEY ?? '';
+export const REGION = process.env.REACT_APP_REGION
+    ? process.env.REACT_APP_REGION
+    : 'US';
 
 /* URL's  */
 export const URL = {
-    genTokenUrl: '/aggregation/v2/partners/authentication',
-    activateCustomerUrl: '/aggregation/v2/customers/testing',
-    genConnectUrl: '/connect/v2/generate',
-    accountInfoUrl: '/aggregation/v1/customers/<customerId>/accounts',
-    achUrl: '/aggregation/v1/customers/<customerId>/accounts/<accountId>/details'
+    genTokenUrl: `/${
+        REGION.toLowerCase() || 'us'
+    }/aggregation/v2/partners/authentication`,
+    activateCustomerUrl: `/${REGION.toLowerCase()}/aggregation/v2/customers/testing`,
+    genConnectUrl: `/${REGION.toLowerCase()}/connect/v2/generate`,
+    accountInfoUrl: `/${REGION.toLowerCase()}/aggregation/v1/customers/<customerId>/accounts`,
+    achUrl: `/${REGION.toLowerCase()}/aggregation/v1/customers/<customerId>/accounts/<accountId>/details`,
 };
 
 /* DEPOSIT ACCOUNT TYPES FOR ACH  */
 export const DEPOSIT_ACCOUNTS = ['checking', 'savings'];
+
+/*REGIONS SUPPORTED BY THE APLLICATION */
+export const REGIONS = ['US', 'AU'];
 
 /* Request body the fetch call */
 export const REQUEST_BODY = {
@@ -22,8 +30,10 @@ export const REQUEST_BODY = {
         partnerSecret: PARTNERSECRET,
     },
     activateCustomer: {
-        firstName: 'fastBasslance',
-        lastName: 'TestingM122arch12',
+        firstName: 'John',
+        lastName: 'Smith',
+        email: `john_smith_${Date.now()}@domain.com`,
+        phone: '6786786786',
     },
 };
 
