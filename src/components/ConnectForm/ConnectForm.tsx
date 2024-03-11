@@ -176,7 +176,7 @@ export default function ConnectForm() {
     // Function to get account information
     const getAccountInformation = async (customerId: string) => {
         try {
-            const requestHeaders = generateFetchHeaders('POST', appToken);
+            const requestHeaders = generateFetchHeaders('GET', appToken);
             const { accounts } = await fetch(
                 accountInfoUrl.replace('<customerId>', customerId),
                 requestHeaders
