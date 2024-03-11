@@ -115,8 +115,10 @@ export default function ConnectForm() {
             if (response.status === 401) {
                 const responseText = await response.text();
                 throw new Error(responseText);
-            } else if(response.status === 403) {
-                throw new Error('Applications accessing the Open Banking APIs must be hosted within the United States.');
+            } else if (response.status === 403) {
+                throw new Error(
+                    'Applications accessing the Open Banking APIs must be hosted within the United States.'
+                );
             } else {
                 const { message } = await response.json();
                 throw new Error(message);
@@ -388,7 +390,10 @@ export default function ConnectForm() {
                                     >
                                         <Step
                                             className='!text-[16px]'
-                                            style={{ wordWrap: 'break-word', color: '#111' }}
+                                            style={{
+                                                wordWrap: 'break-word',
+                                                color: '#111',
+                                            }}
                                         >
                                             {step.description}
                                         </Step>

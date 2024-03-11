@@ -9,7 +9,8 @@ export default function SandBoxTip() {
                 </Typography>
 
                 <Typography className='!mb-6 text-gray-700 text-base font-normal leading-5'>
-                    Please select FinBank and use the following username and password.
+                    Please select FinBank and use the following username and
+                    password.
                 </Typography>
 
                 <div className='flex items-start'>

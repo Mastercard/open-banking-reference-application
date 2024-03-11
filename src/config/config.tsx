@@ -9,7 +9,7 @@ export const URL = {
     activateCustomerUrl: '/aggregation/v2/customers/testing',
     genConnectUrl: '/connect/v2/generate',
     accountInfoUrl: '/aggregation/v1/customers/<customerId>/accounts',
-    achUrl: '/aggregation/v1/customers/<customerId>/accounts/<accountId>/details'
+    achUrl: '/aggregation/v1/customers/<customerId>/accounts/<accountId>/details',
 };
 
 /* DEPOSIT ACCOUNT TYPES FOR ACH  */
@@ -33,22 +33,27 @@ export const STEPS = [
         label: 'Create your first customer',
         description: (
             <div>
-                Here, we start with creating a "testing" customer record. We will use this customer later with FinBank test profiles.
+                Here, we start with creating a "testing" customer record. We
+                will use this customer later with FinBank test profiles.
             </div>
         ),
         panel: 'panel0',
-        documentationLink : 'https://developer.mastercard.com/open-banking-us/documentation/quick-start-guide/#2-welcome-your-first-customer'
+        documentationLink:
+            'https://developer.mastercard.com/open-banking-us/documentation/quick-start-guide/#2-welcome-your-first-customer',
     },
     {
         label: 'Attach a bank account to customer',
         description: (
             <div>
-                Now that you have created a customer, the next step is to generate a Connect URL. That is needed to start a Connect session and grant Mastercard Open
-                Banking access to their accounts and financial data.
+                Now that you have created a customer, the next step is to
+                generate a Connect URL. That is needed to start a Connect
+                session and grant Mastercard Open Banking access to their
+                accounts and financial data.
             </div>
         ),
         panel: 'panel1',
-        documentationLink : 'https://developer.mastercard.com/open-banking-us/documentation/connect/'
+        documentationLink:
+            'https://developer.mastercard.com/open-banking-us/documentation/connect/',
     },
     {
         label: 'Pull account information',
@@ -63,7 +68,8 @@ export const STEPS = [
             </div>
         ),
         panel: 'panel2',
-        documentationLink: 'https://developer.mastercard.com/open-banking-us/documentation/quick-start-guide/#step-5---refresh-customer-accounts'
+        documentationLink:
+            'https://developer.mastercard.com/open-banking-us/documentation/quick-start-guide/#step-5---refresh-customer-accounts',
     },
 ];
 

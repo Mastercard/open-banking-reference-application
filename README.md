@@ -2,11 +2,9 @@
 
 [![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-orange.svg)](https://sonarcloud.io/summary/new_code?id=Mastercard_open-banking-reference-application)
 
-
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Mastercard_open-banking-reference-application&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Mastercard_open-banking-reference-application)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=Mastercard_open-banking-reference-application&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=Mastercard_open-banking-reference-application)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=Mastercard_open-banking-reference-application&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=Mastercard_open-banking-reference-application)
-
 
 ## Table of Contents
 
@@ -70,7 +68,7 @@ Follow the steps mentioned in the document to [generate your credentials](https:
 
 ### 2. Add credentials in the .env file
 
-Open banking reference application needs Sandbox API credentials added in the .env file to make the API calls. 
+Open banking reference application needs Sandbox API credentials added in the .env file to make the API calls.
 
 -   Create the `.env` file.
     ```shell
@@ -108,8 +106,8 @@ The following command will execute the test cases and show the result.
 ```shell
 npm run test
 ```
-![landing page](docs/test_case_result.png)
 
+![landing page](docs/test_case_result.png)
 
 ## Steps to be performed for creating application build
 
@@ -144,5 +142,5 @@ app.listen(port, () => {
 ```
 
 ## Contact Us
-If you have any issues or concerns, please click [here](https://github.com/Mastercard/open-banking-reference-application/issues/new) to submit an issue and our team will get back to you as soon as possible.
 
+If you have any issues or concerns, please click [here](https://github.com/Mastercard/open-banking-reference-application/issues/new) to submit an issue and our team will get back to you as soon as possible.
