@@ -38,6 +38,7 @@ However, It is recommended that you use one of NodeJS's LTS releases or one of t
 
 Before using the open banking reference application, you will need to set up a project in the local machine.
 The following commands will help you to get the latest code and install the required dependencies on your machine.
+Test comment
 
 ```shell
 git clone https://github.com/Mastercard/open-banking-reference-application.git
