@@ -9,7 +9,7 @@ export default function SandBoxTip() {
                 </Typography>
 
                 <Typography className='!mb-6 text-gray-700 text-base font-normal leading-5'>
-                    If you're using Sandbox, you can use this simulated account
+                    Please select FinBank and use the following username and password.
                 </Typography>
 
                 <div className='flex items-start'>
@@ -24,14 +24,14 @@ export default function SandBoxTip() {
 
                     <div className='flex flex-col items-start gap-4 w-1/3'>
                         <Typography className='mb-2 text-base !font-[700]'>
-                            Email
+                            Banking Userid
                         </Typography>
                         <Typography className='text-base'>test</Typography>
                     </div>
 
                     <div className='flex flex-col items-start gap-4 w-1/3'>
                         <Typography className='mb-2 text-base !font-[700]'>
-                            Password
+                            Banking Password
                         </Typography>
                         <Typography className='text-base'>
                             profile_02

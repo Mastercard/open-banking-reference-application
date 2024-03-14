@@ -71,7 +71,7 @@ export default function Modal() {
                             View demo
                         </Button>
                         <a
-                            href='https://developer.mastercard.com'
+                            href='https://github.com/Mastercard/open-banking-reference-application'
                             rel='noreferrer'
                             target='_blank'
                         >

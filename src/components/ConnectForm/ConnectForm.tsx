@@ -51,7 +51,6 @@ const {
     activateCustomerUrl,
     genConnectUrl,
     accountInfoUrl,
-    mcDevPortal,
     achUrl,
 } = URL;
 
@@ -116,6 +115,8 @@ export default function ConnectForm() {
             if (response.status === 401) {
                 const responseText = await response.text();
                 throw new Error(responseText);
+            } else if(response.status === 403) {
+                throw new Error('Applications accessing the Open Banking APIs must be hosted within the United States.');
             } else {
                 const { message } = await response.json();
                 throw new Error(message);
@@ -175,7 +176,7 @@ export default function ConnectForm() {
     // Function to get account information
     const getAccountInformation = async (customerId: string) => {
         try {
-            const requestHeaders = generateFetchHeaders('POST', appToken);
+            const requestHeaders = generateFetchHeaders('GET', appToken);
             const { accounts } = await fetch(
                 accountInfoUrl.replace('<customerId>', customerId),
                 requestHeaders
@@ -387,12 +388,12 @@ export default function ConnectForm() {
                                     >
                                         <Step
                                             className='!text-[16px]'
-                                            style={{ wordWrap: 'break-word' }}
+                                            style={{ wordWrap: 'break-word', color: '#111' }}
                                         >
                                             {step.description}
                                         </Step>
                                         <a
-                                            href={mcDevPortal}
+                                            href={step.documentationLink}
                                             target='_blank'
                                             rel='noreferrer'
                                         >
