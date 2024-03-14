@@ -173,7 +173,8 @@ export default function ConnectForm() {
             throw error;
         }
     };
-    // Function to get account information
+    // Function to get account information. 
+    // Make sure to do a GET call.
     const getAccountInformation = async (customerId: string) => {
         try {
             const requestHeaders = generateFetchHeaders('GET', appToken);
