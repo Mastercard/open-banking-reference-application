@@ -65,8 +65,8 @@ Follow the steps mentioned in the document to [generate your credentials](https:
 
 -   Login to the [Mastercard developer's portal](https://developer.mastercard.com/product/open-banking/)
 -   Log in and click the **Create New Project** button at the top of this page.
--   Enter your project name and select Open Banking as the API service, then click on the Proceed button.
--   Select United States in the Commercial Countries drop down list, and click on the **Proceed** button.
+-   Enter your project name and select Open Banking as the API service, then click on the **Proceed** button.
+-   Select **United States** in the **Commercial Countries** drop down list, and click on the **Proceed** button.
 -   Enter a description of your project on the next page, and click on the **Create Project** button.
 -   Take note of your Partner ID, Partner Secret and App Key. These will be required in the following sections.
 
