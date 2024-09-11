@@ -1,7 +1,7 @@
 name: Build
 on:
   push:
-     branches: [main, staging, develop]
+     branches: [main, staging, develop, feature/workflow]
   pull_request:
     types: [opened, synchronize, reopened]
   schedule:
