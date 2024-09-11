@@ -7,25 +7,10 @@ import {
     ImageList,
 } from '@mui/material';
 
+import './Cards.css';
+import data from './data';
+
 export default function Cards() {
-    const cardsData = [
-        {
-            logo: '/list.svg',
-            title: 'API Products',
-            description:
-                'Check out the full product catalog of Open Banking services from Mastercard',
-            href: 'https://developer.mastercard.com/open-banking-us/documentation/api-reference/',
-            anchorTitle: 'Learn more',
-        },
-        {
-            logo: '/download.svg',
-            title: 'Quick start guide',
-            description:
-                'Learn about key concepts and find out how to quickly connect to our services',
-            href: 'https://developer.mastercard.com/open-banking-us/documentation/quick-start-guide/',
-            anchorTitle: 'Learn more',
-        },
-    ];
     return (
         <Box sx={{ width: '100%', marginTop: '35px' }}>
             <Grid
@@ -34,7 +19,7 @@ export default function Cards() {
                 columnSpacing={{ xs: 1, sm: 2, md: 5 }}
                 sx={{ alignContent: 'stretch' }}
             >
-                {cardsData.map((card) => (
+                {data.cardsData.map((card: any) => (
                     <Grid item xs={6} key={card.title}>
                         <Card
                             sx={{
@@ -47,7 +32,7 @@ export default function Cards() {
                             <CardContent>
                                 <ImageList sx={{ mb: 2 }}>
                                     <img
-                                        style={{ height: '28px' }}
+                                        id='card-img'
                                         src={card.logo}
                                         alt={card.title}
                                         loading='lazy'
@@ -74,7 +59,7 @@ export default function Cards() {
                                     <a
                                         href={card.href}
                                         target='_blank'
-                                        style={{ fontWeight: 1000 }}
+                                        id='card-link'
                                         rel='noreferrer'
                                         className='!text-sm'
                                     >

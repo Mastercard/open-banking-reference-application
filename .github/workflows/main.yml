@@ -1,8 +1,7 @@
 name: Build
 on:
   push:
-    branches:
-      - main
+     branches: [main, staging, develop]
   pull_request:
     types: [opened, synchronize, reopened]
   schedule:
@@ -16,6 +15,10 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - name: Install dependencies
+        run: npm install
+      - name: Test and coverage
+        run: npm run test:coverage
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:

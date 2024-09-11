@@ -1,0 +1,27 @@
+.curl {
+    background-color: rgb(39, 40, 34);
+    padding: 10px;
+    color: #f9f8f5;
+    font-size: small;
+    font-weight: normal;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    max-height: 25rem;
+    overflow-y: scroll;
+}
+
+.curl-value {
+    color: #fd971f;
+}
+
+.curl-copy {
+    cursor: pointer;
+    margin-right: 0 !important;
+    position: absolute;
+    right: 50px;
+    margin-top: 0.5rem;
+    color: white;
+}

@@ -1,0 +1,10 @@
+services:
+    open-banking-us:
+        build: .
+        environment:
+            - REACT_APP_PARTNERID=${REACT_APP_PARTNERID}
+            - REACT_APP_SECRET=${REACT_APP_SECRET}
+            - REACT_APP_KEY=${REACT_APP_KEY}
+            - REACT_APP_AUTO_CREATE_CUSTOMER=${REACT_APP_AUTO_CREATE_CUSTOMER}
+        ports:
+            - 4000:3000

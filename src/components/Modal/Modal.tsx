@@ -1,18 +1,29 @@
 import { useState } from 'react';
-import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
-import { Box, Link, Stack, Typography } from '@mui/material';
-import ExternalIcon from '../../utils/external-icon';
+import { Box, Button, Dialog, Link, Stack, Typography } from '@mui/material';
 
-export default function Modal() {
-    const [open, setOpen] = useState(true);
+import { ExternalIcon } from '../../components';
 
-    const handleClose = () => {
+import './Modal.css';
+import data from './data';
+
+import { PARTNERID, PARTNERSECRET, APP_KEY } from '../../config';
+
+export default function Modal({ handleModalClose }: any) {
+    const [open, setOpen] = useState(!!(PARTNERID && PARTNERSECRET && APP_KEY));
+
+    /**
+     * Handle close event handler for modal close
+     */
+    const handleClose = async () => {
         setOpen(false);
+        if (handleModalClose) {
+            await handleModalClose();
+        }
     };
 
     return (
         <Dialog
+            data-testid={'modal-component'}
             open={open}
             aria-labelledby='alert-dialog-title'
             aria-describedby='alert-dialog-description'
@@ -31,12 +42,11 @@ export default function Modal() {
                         <Typography className='ref-text'>
                             REFERENCE APP
                         </Typography>
-                        <Typography className='open-bannking-text'>
+                        <Typography className='open-banking-text'>
                             Open Banking
                         </Typography>
                         <Typography className=''>
-                            Easily connect your customer's financial data to
-                            your product.
+                            {data.text.description}
                         </Typography>
                         <Stack
                             direction='row'
@@ -46,18 +56,18 @@ export default function Modal() {
                         >
                             <Link
                                 variant='caption'
-                                href='https://developer.mastercard.com/open-banking-us/documentation'
+                                href={data.link.product}
                                 target='_blank'
                                 className='!no-underline'
                                 fontWeight={'bold'}
                                 color={'#111'}
                             >
-                                Learn more about the product
+                                {data.text.more}
                             </Link>
                             <img
+                                id='product-img'
                                 src='/utility.svg'
-                                style={{ marginTop: '1px' }}
-                                alt=''
+                                alt='product-img'
                             />
                         </Stack>
                     </Box>
@@ -67,11 +77,12 @@ export default function Modal() {
                             variant='text'
                             onClick={handleClose}
                             className='demo__button flex items-center'
+                            data-testid={'modal-close'}
                         >
                             View demo
                         </Button>
                         <a
-                            href='https://github.com/Mastercard/open-banking-reference-application'
+                            href={data.link.github}
                             rel='noreferrer'
                             target='_blank'
                         >

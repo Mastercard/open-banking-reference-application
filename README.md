@@ -2,11 +2,9 @@
 
 [![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-orange.svg)](https://sonarcloud.io/summary/new_code?id=Mastercard_open-banking-reference-application)
 
-
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Mastercard_open-banking-reference-application&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Mastercard_open-banking-reference-application)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=Mastercard_open-banking-reference-application&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=Mastercard_open-banking-reference-application)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=Mastercard_open-banking-reference-application&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=Mastercard_open-banking-reference-application)
-
 
 ## Table of Contents
 
@@ -41,10 +39,10 @@ The following commands will help you to get the latest code and install the requ
 
 ```shell
 git clone https://github.com/Mastercard/open-banking-reference-application.git
-```
 
-```shell
-cd open-banking-reference-application && npm i
+cd open-banking-reference-application
+
+npm i
 ```
 
 ### References
@@ -63,16 +61,14 @@ Follow the steps mentioned in the document to [generate your credentials](https:
 
 #### Instructions to create a Mastercard Developers project:
 
--   Login to the [Mastercard developer's portal](https://developer.mastercard.com/product/open-banking/)
--   Log in and click the **Create New Project** button at the top of this page.
--   Enter your project name and select Open Banking as the API service, then click on the **Proceed** button.
--   Select **United States** in the **Commercial Countries** drop down list, and click on the **Proceed** button.
--   Enter a description of your project on the next page, and click on the **Create Project** button.
+-   Login to [Mastercard developer's portal](https://developer.mastercard.com/product/open-banking/)
+-   Log in and click the Create Project button at the top of this page
+-   Select Open Banking and follow the step-by-step instructions
 -   Take note of your Partner ID, Partner Secret and App Key. These will be required in the following sections.
 
 ### 2. Add credentials in the .env file
 
-Open banking reference application needs Sandbox API credentials added in the .env file to make the API calls. 
+Open banking reference application needs Sandbox API credentials added in the .env file to make the API calls.
 
 -   Create the `.env` file.
     ```shell
@@ -105,13 +101,13 @@ Now that you have a **Customer ID**, the next step is to add a bank account.
 
 ## Steps to run test cases
 
-The following command will execute the test cases and show the result.
+The following command will execute the test cases and show the status of each test.
 
 ```shell
 npm run test
 ```
-![landing page](docs/test_case_result.png)
 
+![landing page](docs/test_case_result.png)
 
 ## Steps to be performed for creating application build
 
@@ -146,5 +142,6 @@ app.listen(port, () => {
 ```
 
 ## Contact Us
-If you have any issues or concerns, please click [here](https://github.com/Mastercard/open-banking-reference-application/issues/new) to submit an issue and our team will get back to you as soon as possible.
 
+Have issues or concerns regarding the application?
+Please create an issue in the GitHub and our team will try to address the issue as soon as possible.

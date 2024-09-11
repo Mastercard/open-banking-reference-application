@@ -4,7 +4,10 @@ export const connectFormModel = {
         userName: {
             name: 'userName',
             label: 'USERNAME',
-            requiredErrorMsg: 'username is required',
+            requiredErrorMessage: 'username is required',
+            requirementMessage: 'username does not meet requirements.',
+            suggestionMessage:
+                'minimum 6 characters maximum 255 characters any mix of uppercase, lowercase, numeric, and non-alphabet special characters.',
         },
     },
 };

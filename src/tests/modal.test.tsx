@@ -1,11 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import Modal from '../components/Modal/Modal';
+import userEvent from '@testing-library/user-event';
 
 describe('Testing Modal Component', () => {
     test('Should have text - Open banking', () => {
         render((<Modal />) as React.ReactElement);
         expect(
-            screen.getByText('open banking', { exact: false })
+            screen.getByText(/Open Banking/, { exact: false })
         ).toBeInTheDocument();
     });
 
@@ -49,5 +50,17 @@ describe('Testing Modal Component', () => {
         expect(
             screen.getByRole('link', { name: /view on github/i })
         ).toHaveAttribute('target', '_blank');
+    });
+
+    test('click handleModalClose event ', async () => {
+        const handleModalClose = async () => {
+            return 'close';
+        };
+        render(
+            (
+                <Modal handleModalClose={handleModalClose} />
+            ) as React.ReactElement
+        );
+        await userEvent.click(screen.getByTestId('modal-close'));
     });
 });
