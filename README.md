@@ -19,7 +19,7 @@
 -   [Demo](#demo)
     1. [Generate your credentials](#1-generate-your-credentials)
     2. [Add credentials in the .env file](#2-add-credentials-in-the-env-file)
-    3. [Run application](#3-setup-and-run-the-application)
+    3. [Setup and run the application](#3-setup-and-run-the-application)
     4. [Create your first customer](#4-create-your-first-customer)
     5. [Add a bank account to customer](#5-add-a-bank-account-to-customer)
     6. [Pull account information](#6-pull-account-information)
@@ -103,7 +103,7 @@ The Open Banking Reference App needs Sandbox API credentials adding to the `.env
 2. Update the `.env` file with your Sandbox API credentials generated in step 1.
 3. The default value of `REACT_APP_AUTO_CREATE_CUSTOMER` is set to `false`. If the customer creation needs to be initated automatically then the value should be set to `true`
 
-### 3. Setup and Run the application
+### 3. Setup and run the application
 
 -   ##### Run without docker
     The following command will install the required depdendancies on your machine. (This command should be executed during the initial setup)
