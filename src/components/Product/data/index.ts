@@ -190,6 +190,16 @@ const data = {
             type: 'lend',
             shortName: 'Verification of Income and Employment - Payroll',
             api: '/decisioning/v2/customers/<customerId>/voiePayroll',
+            link: 'https://developer.mastercard.com/open-banking-us/documentation/products/lend/lend-reports/#verification-of-income-and-employment---payroll',
+            description:
+                'Generate or refresh a VOIE - Payroll report. For clients using the product via a consumer permissioning experience via Connect, the original VOIE - Payroll report generates when the consumer completes the Connect experience, and this API is only used for future report refreshes without reengaging the consumer.',
+        },
+        {
+            name: 'Verification of Income and Employment - Paystub',
+            requestType: 'POST',
+            identifier: 'voieptx',
+            shortName: 'Verification of Income and Employment - Paystub',
+            api: '/decisioning/v2/customers/<customerId>/voieTxVerify/withInterview',
             link: 'https://developer.mastercard.com/open-banking-us/documentation/products/lend/lend-reports/#verification-of-income-and-employment---paystub-with-txverify',
             description:
                 'Generate a VOIE - Paystub (with TXVerify) report for all checking and savings under the given customer. This service retrieves up to two years of transaction history for the given accounts. It then uses this information as well as the provided paystub(s), which are passed into the request body as asset IDs (generated using the Store Customer Pay Statement API) to generate the VOIE - Paystub (with TXVerify) report.',
@@ -201,19 +211,9 @@ const data = {
             type: 'lend',
             shortName: 'Verification of Employment - Payroll',
             api: '/decisioning/v2/customers/<customerId>/voePayroll',
-            link: 'https://developer.mastercard.com/open-banking-us/documentation/api-reference/?view=api#GenerateCashFlowBusinessReport',
+            link: 'https://developer.mastercard.com/open-banking-us/documentation/products/lend/lend-reports/#verification-of-employment---payroll',
             description:
-                "The Cash Flow report provides cash flow credit and debit information about customer's accounts. It retrieves up to 12 months of validated banking data for an individual customer, based on all accounts they have shared via Connect.",
-        },
-        {
-            name: 'Verification of Income and Employment -  Paystub (with TXVerify)',
-            requestType: 'POST',
-            identifier: 'voieptx',
-            shortName: 'Verification of Income and Employment -  Paystub (with TXVerify)',
-            api: '/decisioning/v2/customers/<customerId>/voieTxVerify/withInterview',
-            link: 'https://developer.mastercard.com/open-banking-us/documentation/api-reference/?view=api#GenerateCashFlowBusinessReport',
-            description:
-                "The Cash Flow report provides cash flow credit and debit information about customer's accounts. It retrieves up to 12 months of validated banking data for an individual customer, based on all accounts they have shared via Connect.",
+                "Generate or refresh a VOE - Payroll report. Often used as a complementary report to the VOIE-Payroll report to fulfill the pre-close VOE requirements. It retrieves the customer's employment details and employment status through the payroll source without any income information.",
         },
         {
             name: 'Verification of Employment - Transactions',
@@ -224,7 +224,7 @@ const data = {
             api: '/decisioning/v2/customers/<customerId>/voeTransactions',
             link: 'https://developer.mastercard.com/open-banking-us/documentation/products/lend/lend-reports/#verification-of-employment---transactions',
             description:
-                'Retrieve the latest credit transaction information from the borrower\'s connected bank accounts and groups them into income streams so that you can view their payment history to ensure a direct deport was made within the expected cadence. The report displays transaction descriptions without any dollar amounts so that income re-verification isn\'t necessary.',
+                "Retrieve the latest credit transaction information from the borrower's connected bank accounts and groups them into income streams so that you can view their payment history to ensure a direct deport was made within the expected cadence. The report displays transaction descriptions without any dollar amounts so that income re-verification isn't necessary.",
         },
         {
             name: 'Prequalification CRA Report',
@@ -290,7 +290,6 @@ const data = {
             description:
                 'Cash Flow Analytics, enabled for a variety of use cases, evaluates a customer’s account balances to help identify risks and give insights to a financial decision. An aggregate view of all the accounts the customer has permissioned access to is provided in the report. This includes information such as current balance, transaction data, debits/credits, estimated revenue for businesses, deposits, withdrawals, and non-sufficient funds (NSFs) over a specified time period up to 24 months.',
         },
-
     ],
 };
 

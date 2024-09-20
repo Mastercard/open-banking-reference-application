@@ -80,7 +80,7 @@ export default function ConnectForm() {
     };
 
     /**
-     * Initialize aap with authentication, consent workflow and activating customer
+     * Initialize aap with authentication and activating customer
      * @param userName unique username for activating customer
      * @param reset is demo resetted
      */
@@ -117,7 +117,7 @@ export default function ConnectForm() {
                 setUser(userResponse);
             }
             setLoading(false);
-            handleNext(false, reset);
+            handleNext(reset);
         }
     };
 
@@ -151,7 +151,7 @@ export default function ConnectForm() {
                         timeout: 2000,
                     })
                 );
-                handleNext(false, false);
+                handleNext(false);
             } else {
                 handleNext();
             }
@@ -168,21 +168,15 @@ export default function ConnectForm() {
      * @param skip is next step to be skipped or not
      * @param reset is demo resetted
      */
-    const handleNext = (skip = false, reset = false) => {
+    const handleNext = (reset = false) => {
         setLoading(false);
-        if (!skip) {
-            setActiveStep(reset ? 1 : (prevActiveStep) => prevActiveStep + 1);
-            setCompletedSteps(
-                (reset ? ['panel0'] : completedSteps).concat(
-                    Steps[activeStep]?.panel
-                )
-            );
-            setExpanded(Steps[reset ? 1 : activeStep + 1]?.panel);
-        } else {
-            handleError({
-                message: 'Failed to retrieve consent receipt Id.',
-            });
-        }
+        setActiveStep(reset ? 1 : (prevActiveStep) => prevActiveStep + 1);
+        setCompletedSteps(
+            (reset ? ['panel0'] : completedSteps).concat(
+                Steps[activeStep]?.panel
+            )
+        );
+        setExpanded(Steps[reset ? 1 : activeStep + 1]?.panel);
     };
 
     /**
@@ -248,7 +242,7 @@ export default function ConnectForm() {
                                         institutionLoginId: institutionLogin,
                                     });
                                     setAccountData(accData.accounts);
-                                    handleNext(false, false);
+                                    handleNext(false);
                                 }
                                 setDisableSubmit(false);
                             })();

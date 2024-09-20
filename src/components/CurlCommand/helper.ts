@@ -31,21 +31,12 @@ export const getCurlCommandParameters = (
     printHeaders += '--header ' + '"Content-Type: application/json"' + ' ';
     headers.push({ key: 'Accept', value: 'application/json' });
     printHeaders += '--header ' + '"Accept: application/json"' + ' ';
-    headers.push({ key: 'App-Key', value: APP_KEY });
-    printHeaders += '--header ' + `"App-Key: ${APP_KEY}"` + ' ';
+    headers.push({ key: 'Finicity-App-Key', value: APP_KEY });
+    printHeaders += '--header ' + `"Finicity-App-Key: ${APP_KEY}"` + ' ';
     if (requestData.token) {
-        headers.push({ key: 'App-Token', value: requestData.token });
-        printHeaders += '--header ' + `"App-Token: ${requestData.token}"` + ' ';
-    }
-    if (requestData.consentReceiptId) {
-        headers.push({
-            key: 'Consent-Receipt-Id',
-            value: requestData.consentReceiptId,
-        });
+        headers.push({ key: 'Finicity-App-Token', value: requestData.token });
         printHeaders +=
-            '--header ' +
-            `"Consent-Receipt-Id: ${requestData.consentReceiptId}"` +
-            ' ';
+            '--header ' + `"Finicity-App-Token: ${requestData.token}"` + ' ';
     }
     return {
         url,

@@ -13,7 +13,7 @@ export const generateFetchHeaders = async (
     accept = 'application/json'
 ) => {
     const myHeaders = new Headers();
-    myHeaders.append('Finicity-App-Key', APP_KEY);
+    myHeaders.append('Finicity-App-Key', APP_KEY ?? '');
     myHeaders.append('Content-Type', 'application/json');
     myHeaders.append('Accept', accept);
     if (requestData?.token) {
@@ -31,10 +31,6 @@ export const generateFetchHeaders = async (
             });
         }
         myHeaders.append('Finicity-App-Token', requestData.token);
-    }
-
-    if (requestData?.consentReceiptId) {
-        myHeaders.append('Consent-Receipt-Id', requestData.consentReceiptId);
     }
 
     return {

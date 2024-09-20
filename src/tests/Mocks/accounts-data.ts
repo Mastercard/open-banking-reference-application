@@ -7,7 +7,7 @@ const accounts = [
         name: 'Transaction',
         displayName: 'Transaction',
         balance: 22327.3,
-        type: ' transactionAndSavings',
+        type: ' checking',
         aggregationStatusCode: 0,
         status: 'active',
         customerId: '2488863',
@@ -37,7 +37,7 @@ const accounts = [
         displayName: 'Savings',
 
         balance: '786000',
-        type: 'transactionAndSavings',
+        type: 'savings',
         aggregationStatusCode: '0',
         status: 'active',
         customerId: '2488863',
@@ -47,7 +47,7 @@ const accounts = [
         aggregationAttemptDate: '1722238773',
         createdDate: '1722238749',
         lastUpdatedDate: '1722274751',
-        currency: 'AUD',
+        currency: 'USD',
         lastTransactionDate: '1722238763',
         institutionLoginId: '2336229',
         detail: {
