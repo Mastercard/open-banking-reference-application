@@ -24,7 +24,6 @@
     7. [Explore usecases](#7-usecases)
 -   [Hosting Reference App](#hosting-reference-app)
 -   [Contact Us](#contact-us)
-
 ## Overview
 
 The Open Banking Reference App allows you to explore [Mastercard's Open Banking Service (MOBS)](https://developer.mastercard.com/open-banking-us/documentation/) to incorporate it into your product. This application allows you to:
@@ -152,9 +151,13 @@ In Connect flow:
 4. Select all accounts, and then click **Save**.
 5. Click **Submit**.
 
+<<<<<<< HEAD
 <p align="center">
   <img  height="500" src="https://user-images.githubusercontent.com/13854193/277695116-11235128-67d8-47a6-8b1b-c93e35e590da.gif">
 </p>
+=======
+![connect flow finbank](docs/account-consent-workflow.png)
+>>>>>>> 691915ced73ff3636ebfd84c8b837866be405506
 
 ### 6. Pull account information
 
