@@ -46,10 +46,13 @@ export const submitReport = async (
  * @returns generate report response
  */
 const generateReport = async (reportData: any, requestData: any) => {
-    let requestBody = reportData.body
+    let requestBody = reportData.body;
     const requestHeaders = await generateFetchHeaders('POST', requestData);
     if (reportData.identifier === 'voieptx') {
-        const assetId = await storeCustomerPayStatement(requestHeaders, requestData);
+        const assetId = await storeCustomerPayStatement(
+            requestHeaders,
+            requestData
+        );
         const updatedBody = {
             voieWithInterviewData: {
                 txVerifyInterview: [
@@ -101,7 +104,7 @@ const storeCustomerPayStatement = async (
         requestOptions
     );
     const payStatementResponse = await result.json();
-    return payStatementResponse.assetId
+    return payStatementResponse.assetId;
 };
 
 /**
@@ -137,7 +140,7 @@ const reportGenerated = async (
     }
     while (retry > 0) {
         retry--;
-        await delay(reportData.identifier === 'voieptx' ? 20000 : 2000 );
+        await delay(reportData.identifier === 'voieptx' ? 20000 : 2000);
         reportsPending = await checkReportStatus(
             reportId,
             requestData,
@@ -232,32 +235,4 @@ export const downloadReport = (report: any, filename: string, isPdf = true) => {
     alink.href = fileURL;
     alink.download = `${filename}.${isPdf ? 'pdf' : 'json'}`;
     alink.click();
-};
-
-/**
- * Download PDF report
- * @param report generated report
- * @param filename filename
- */
-export const downloadPDf = (report: any, filename: string) => {
-    const fileURL = window.URL.createObjectURL(report);
-    const alink = document.createElement('a');
-    alink.target = '_blank';
-    alink.href = fileURL;
-    alink.download = `${filename}.json`;
-    alink.click();
-};
-
-/**
- * Download json report
- * @param report generated report
- */
-export const downloadJson = (report: any) => {
-    const x: any = window.open();
-    x.document.open();
-    x.document.write(
-        '<html><body><pre>' +
-            JSON.stringify(report, null, 2) +
-            '</pre></body></html>'
-    );
 };

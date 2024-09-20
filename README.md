@@ -2,11 +2,9 @@
 
 [![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-orange.svg)](https://sonarcloud.io/summary/new_code?id=Mastercard_open-banking-reference-application)
 
-
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Mastercard_open-banking-reference-application&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Mastercard_open-banking-reference-application)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=Mastercard_open-banking-reference-application&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=Mastercard_open-banking-reference-application)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=Mastercard_open-banking-reference-application&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=Mastercard_open-banking-reference-application)
-
 
 ## Table of Contents
 
@@ -26,7 +24,6 @@
     7. [Explore usecases](#7-usecases)
 -   [Hosting Reference App](#hosting-reference-app)
 -   [Contact Us](#contact-us)
-  
 ## Overview
 
 The Open Banking Reference App allows you to explore [Mastercard's Open Banking Service (MOBS)](https://developer.mastercard.com/open-banking-us/documentation/) to incorporate it into your product. This application allows you to:
@@ -72,10 +69,7 @@ You can run the following command to execute the test cases against the latest v
 npm run test
 ```
 
-![landing page](docs/test_case_result.png)
-
-
-
+![test case result page](docs/test_case_result.png)
 
 ## Demo
 
@@ -157,7 +151,9 @@ In Connect flow:
 4. Select all accounts, and then click **Save**.
 5. Click **Submit**.
 
-![connect flow finbank](docs/account-consent-workflow.png)
+<p align="center">
+  <img  height="500" src="https://user-images.githubusercontent.com/13854193/277695116-11235128-67d8-47a6-8b1b-c93e35e590da.gif">
+</p>
 
 ### 6. Pull account information
 
@@ -229,4 +225,3 @@ app.listen(port, () => {
 
 Have issues or concerns regarding the application?
 Please create an issue in the GitHub and our team will try to address the issue as soon as possible.
-

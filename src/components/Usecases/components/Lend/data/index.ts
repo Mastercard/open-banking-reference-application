@@ -62,20 +62,20 @@ const data = {
             body: JSON.stringify(requestBodyWithPayroll),
         },
         {
+            name: 'Verification of Income and Employment - Paystub',
+            requestType: 'POST',
+            identifier: 'voieptx',
+            shortName: 'Verification of Income and Employment - Paystub',
+            api: '/decisioning/v2/customers/<customerId>/voieTxVerify/withInterview',
+            body: JSON.stringify(requestBody),
+        },
+        {
             name: 'Verification of Employment - Payroll',
             requestType: 'POST',
             identifier: 'voep',
             shortName: 'Verification of Employment - Payroll',
             api: '/decisioning/v2/customers/<customerId>/voePayroll',
             body: JSON.stringify(requestBodyWithPayroll),
-        },
-        {
-            name: 'Verification of Income and Employment -  Paystub (with TXVerify)',
-            requestType: 'POST',
-            identifier: 'voieptx',
-            shortName: 'Verification of Income and Employment -  Paystub (with TXVerify)',
-            api: '/decisioning/v2/customers/<customerId>/voieTxVerify/withInterview',
-            body: JSON.stringify(requestBody),
         },
         {
             name: 'Verification of Employment - Transactions',
@@ -139,7 +139,7 @@ const data = {
         getReport:
             '/decisioning/v4/customers/<customerId>/reports/<reportId>?onBehalfOf=Some entity&purpose=99',
         getAnalyticsReport: '/analytics/data/v1/<reportId>',
-        payStatements: '/aggregation/v1/customers/<customerId>/payStatements'
+        payStatements: '/aggregation/v1/customers/<customerId>/payStatements',
     },
 };
 

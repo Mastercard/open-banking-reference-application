@@ -31,6 +31,77 @@ describe('Testing manage component', () => {
         window.fetch = jest.fn().mockResolvedValue({
             json: async () => {
                 return {
+                    id: '123',
+                    reportId: ' qwertyuiop',
+                    status: 'success',
+                    reports: [
+                        {
+                            id: 'qwertyuiop',
+                            reportId: ' qwertyuiop',
+                            status: 'success',
+                        },
+                    ],
+                };
+            },
+            blob: async () => {
+                return 'data';
+            },
+            status: 200,
+        });
+        render(
+            <Provider store={store}>
+                <Lend requestData={requestData} />
+            </Provider>
+        );
+        const generateReportElement =
+            await screen.findByTestId('generate-report');
+        expect(generateReportElement).toBeInTheDocument();
+        await act(() => fireEvent.click(generateReportElement));
+    });
+
+    test('should fetch paystub', async () => {
+        window.fetch = jest.fn().mockResolvedValue({
+            json: async () => {
+                return {
+                    id: 'qwertyuiop',
+                    reportId: ' qwertyuiop',
+                    status: 'success',
+                    assetId: '12345678',
+                    reports: [
+                        {
+                            id: 'qwertyuiop',
+                            reportId: ' qwertyuiop',
+                            status: 'success',
+                        },
+                    ],
+                };
+            },
+            blob: async () => {
+                return 'data';
+            },
+            status: 200,
+        });
+        render(
+            <Provider store={store}>
+                <Lend requestData={requestData} />
+            </Provider>
+        );
+        const selectElement = screen.getByRole('combobox');
+        await act(() => userEvent.click(selectElement));
+        const selectElementoption = await screen.findByText(
+            'Verification of Income and Employment - Paystub'
+        );
+        await act(() => userEvent.click(selectElementoption));
+        const generateReportElement =
+            await screen.findByTestId('generate-report');
+        expect(generateReportElement).toBeInTheDocument();
+        await act(() => fireEvent.click(generateReportElement));
+    });
+
+    test('should fetch analytics', async () => {
+        window.fetch = jest.fn().mockResolvedValue({
+            json: async () => {
+                return {
                     id: 'qwertyuiop',
                     reportId: ' qwertyuiop',
                     status: 'success',
@@ -53,6 +124,13 @@ describe('Testing manage component', () => {
                 <Lend requestData={requestData} />
             </Provider>
         );
+        const selectElement = screen.getByRole('combobox');
+        await act(() => userEvent.click(selectElement));
+
+        const selectElementoption = await screen.findByText(
+            data.reports[12].name
+        );
+        await act(() => userEvent.click(selectElementoption));
         const generateReportElement =
             await screen.findByTestId('generate-report');
         expect(generateReportElement).toBeInTheDocument();

@@ -1,5 +1,4 @@
 import { Fragment } from 'react';
-import { Tooltip } from '@mui/material';
 export const Steps = [
     {
         label: 'Add your first customer',
@@ -11,7 +10,7 @@ export const Steps = [
                     see{' '}
                     <a
                         rel='noreferrer'
-                        href='https://developer.mastercard.com/open-banking-us/documentation/access-and-config/customers'
+                        href='https://developer.mastercard.com/open-banking-us/documentation/quick-start-guide/#2-welcome-your-first-customer'
                         target='_blank'
                     >
                         <b>Customers.</b>
@@ -28,19 +27,18 @@ export const Steps = [
         description: (
             <Fragment>
                 <div>
-                    Having created a customer, the next step is to obtain
-                    consent to access their financial data. For this, generate a
+                    Having created a customer, the next step is to generate a
                     Connect URL to launch the Connect application.
                 </div>
                 <br />
                 <div>
                     The Connect application allows customers to select accounts
-                    they want to share and give you consent to access them. To learn more,{' '}
+                    they want to share. To learn more,{' '}
                     <span>
                         see{' '}
                         <a
                             rel='noreferrer'
-                            href='https://developer.mastercard.com/open-banking-us/documentation/connect/integrating/'
+                            href='https://developer.mastercard.com/open-banking-us/documentation/connect/'
                             target='_blank'
                         >
                             <b>Connect Application</b>
@@ -51,16 +49,15 @@ export const Steps = [
         ),
         panel: 'panel1',
         documentationLink:
-            'https://developer.mastercard.com/open-banking-us/documentation/connect/',
+            'https://developer.mastercard.com/open-banking-us/documentation/connect/integrating/',
     },
     {
         label: 'Pull account information',
         description: (
             <div>
                 <div className='mt-2'>
-                    Having obtained consent receipt ID, now you can retrieve
-                    some of the latest data from the shared accounts. For that,
-                    call the{' '}
+                    Now you can retrieve some of the latest data from the shared
+                    accounts. For that, call the{' '}
                     <span>
                         <a
                             rel='noreferrer'

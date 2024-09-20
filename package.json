@@ -51,7 +51,7 @@
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
-        "test:coverage": "react-scripts test --env=jsdom --watchAll=false --coverage --collectCoverageFrom='src/components/**/*.tsx'",
+        "test:coverage": "react-scripts test --env=jsdom --watchAll=false --coverage",
         "eject": "react-scripts eject",
         "lint": "eslint --fix --ext .ts,.tsx ./src",
         "prettier": "npx prettier --write ."
@@ -77,8 +77,7 @@
     "jest": {
         "coveragePathIgnorePatterns": [
             "src/App.tsx",
-            "src/index.tsx",
-            "src/setupProxy.js"
+            "src/index.tsx"
         ]
     }
 }

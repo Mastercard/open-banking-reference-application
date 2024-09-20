@@ -54,7 +54,6 @@ export default function CurlCommand({ product, requestData, body }: any) {
                                         <span>
                                             --header{' '}
                                             <span className='curl-value'>
-                                                {/* {header.key}: {['App-Key', 'App-Token', 'Consent-Receipt-Id'].includes(header?.key) ? (<s>{header.value}</s>) : header.value}  \ */}
                                                 '{header.key}: {header.value}' \
                                             </span>
                                         </span>
