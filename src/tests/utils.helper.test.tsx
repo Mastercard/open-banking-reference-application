@@ -34,7 +34,7 @@ describe('Testing Utils', () => {
                 partnerId: '1234567890',
                 partnerSecret: 'qwertyuiop',
             });
-            expect(token).toEqual('asdfghjkl')
+            expect(token).toEqual('asdfghjkl');
         });
 
         test('should test generateAppToken', async () => {
@@ -49,15 +49,15 @@ describe('Testing Utils', () => {
                     partnerSecret: 'qwertyuiop',
                 });
             } catch (error: any) {
-                expect(error.message).toEqual('unauthorized')
+                expect(error.message).toEqual('unauthorized');
             }
         });
-        
+
         test('should test generateAppToken', async () => {
             try {
                 window.fetch = jest.fn().mockResolvedValue({
                     text: async () => 'restricted region',
-                    
+
                     status: 403,
                 });
                 await generateAppToken({
@@ -65,7 +65,9 @@ describe('Testing Utils', () => {
                     partnerSecret: 'qwertyuiop',
                 });
             } catch (error: any) {
-                expect(error.message).toEqual('Applications accessing the Open Banking APIs must be hosted within the US.')
+                expect(error.message).toEqual(
+                    'Applications accessing the Open Banking APIs must be hosted within the US.'
+                );
             }
         });
 
@@ -83,8 +85,8 @@ describe('Testing Utils', () => {
                     partnerId: '1234567890',
                     partnerSecret: 'qwertyuiop',
                 });
-            }  catch (error: any) {
-                expect(error.message).toEqual('resource not found')
+            } catch (error: any) {
+                expect(error.message).toEqual('resource not found');
             }
         });
     });

@@ -5,6 +5,7 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Mastercard_open-banking-reference-application&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Mastercard_open-banking-reference-application)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=Mastercard_open-banking-reference-application&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=Mastercard_open-banking-reference-application)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=Mastercard_open-banking-reference-application&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=Mastercard_open-banking-reference-application)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=Mastercard_open-banking-reference-application&metric=coverage)](https://sonarcloud.io/summary/new_code?id=Mastercard_open-banking-reference-application)
 
 ## Table of Contents
 
@@ -24,6 +25,7 @@
     7. [Explore usecases](#7-usecases)
 -   [Hosting Reference App](#hosting-reference-app)
 -   [Contact Us](#contact-us)
+
 ## Overview
 
 The Open Banking Reference App allows you to explore [Mastercard's Open Banking Service (MOBS)](https://developer.mastercard.com/open-banking-us/documentation/) to incorporate it into your product. This application allows you to:
