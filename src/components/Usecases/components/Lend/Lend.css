@@ -1,0 +1,12 @@
+.generate-report__button {
+    border-radius: 30px !important;
+    margin-top: -8px !important;
+    margin-right: 15px !important;
+    background-color: #2d7763 !important;
+    padding: 10px 24px !important;
+    color: #fff !important;
+    font-size: 14px !important;
+    line-height: 24px !important;
+    text-transform: none !important;
+    font-family: 'MarkForMC-Medium', sans-serif !important;
+}

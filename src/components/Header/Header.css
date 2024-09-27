@@ -1,0 +1,22 @@
+#developers-link {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: white;
+}
+
+#external-link {
+    padding: 3px;
+}
+
+#github-link {
+    margin-top: 10px;
+}
+
+#view-github {
+    text-transform: none;
+}
+
+#view-github:hover {
+    border: 2px solid #ffffff !important;
+}

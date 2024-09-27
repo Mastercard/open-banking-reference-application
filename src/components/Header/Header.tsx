@@ -6,26 +6,25 @@ import {
     Box,
     Button,
 } from '@mui/material';
-import ExternalIcon from '../../utils/external-icon';
+
+import { ExternalIcon } from '../../components';
+
+import './Header.css';
+import data from './data';
 
 export default function Header() {
     return (
         <AppBar sx={{ background: 'black' }}>
             <Toolbar>
                 <ImageListItem sx={{ width: 60 }}>
-                    <img src='/mc_symbol.svg' alt='' />
+                    <img src='/mc_symbol.svg' alt='mastercard-logo' />
                 </ImageListItem>
 
                 <a
-                    href='https://developer.mastercard.com'
+                    href={data.links.openbanking}
                     target='_blank'
                     rel='noreferrer'
-                    style={{
-                        display: 'flex',
-                        flexDirection: 'row',
-                        textDecoration: 'none',
-                        color: 'white',
-                    }}
+                    id='developers-link'
                 >
                     <Typography
                         justifyContent='center'
@@ -35,9 +34,9 @@ export default function Header() {
                         developers
                     </Typography>
                     <img
-                        style={{ padding: '3px' }}
                         src='/external_link.svg'
-                        alt=''
+                        alt='external-link'
+                        id='external-link'
                     />
                 </a>
                 <Box
@@ -60,14 +59,13 @@ export default function Header() {
                         <Typography variant='h6'>Open Banking</Typography>
                     </Box>
                     <a
-                        href='https://github.com/Mastercard/open-banking-reference-application'
+                        href={data.links.github}
                         target='_blank'
                         rel='noreferrer'
-                        style={{ marginTop: '10px' }}
+                        id='github-link'
                     >
                         <Button
-                            className='view-github__button'
-                            style={{ textTransform: 'none' }}
+                            id='view-github'
                             endIcon={<ExternalIcon data={'#FFFFFF'} />}
                             variant='outlined'
                             sx={{

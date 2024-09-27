@@ -1,0 +1,62 @@
+#product-img {
+    margin-top: 1px;
+}
+
+.modal-dialog-parent {
+    display: flex;
+    width: 462px;
+    padding: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+.modal-dialog-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 350px;
+}
+
+.ref-text {
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    line-height: 16px !important;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    margin-bottom: 8px !important;
+    color: var(--text-text-primary, #111);
+}
+
+.open-banking-text {
+    margin-bottom: 16px !important;
+    font-size: 24px !important;
+    font-weight: 400 !important;
+    line-height: 32px !important;
+    color: var(--text-text-primary, #111);
+}
+
+.view-on-github__button {
+    border: 2px solid var(--surfaces-surface-button, #cf4500);
+    border-radius: 30px !important;
+    padding: 10px 24px !important;
+    color: #cf4500 !important;
+    border-color: #cf4500 !important;
+    text-transform: none !important;
+    font-family: 'MarkForMC-Medium', sans-serif !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    font-weight: 500 !important;
+}
+
+.demo__button {
+    border-radius: 30px !important;
+    background-color: #cf4500 !important;
+    padding: 10px 24px !important;
+    color: #ffffff !important;
+    text-transform: none !important;
+    font-family: 'MarkForMC-Medium', sans-serif !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    font-weight: 500 !important;
+}

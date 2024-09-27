@@ -1,0 +1,30 @@
+#connectForm {
+    width: inherit;
+}
+
+.step {
+    word-wrap: break-word;
+    color: #111;
+}
+
+.connect-form__button {
+    border-radius: 30px !important;
+    margin-top: 15px !important;
+    background-color: #2d7763 !important;
+    padding: 10px 24px !important;
+    color: #fff !important;
+    font-size: 14px !important;
+    line-height: 24px !important;
+    text-transform: none !important;
+    font-family: 'MarkForMC-Medium', sans-serif !important;
+}
+
+.reset-demo__button {
+    border-radius: 30px !important;
+    margin-top: 20px !important;
+    padding: 10px 24px !important;
+    background-color: #fff !important;
+    color: #111 !important;
+    text-transform: none !important;
+    font-family: 'MarkForMC-Medium', sans-serif !important;
+}

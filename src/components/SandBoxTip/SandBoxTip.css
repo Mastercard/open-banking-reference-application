@@ -1,0 +1,5 @@
+.bg-sandbox {
+    background: var(--colors-grey-gray-01, #fcfbfa);
+    border: 1px solid #b1ada6;
+    border-radius: 8px;
+}

@@ -1,5 +1,9 @@
-import { Grid, Stack, Typography } from '@mui/material';
+import { Grid, Stack, Typography, Tooltip } from '@mui/material';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
+
 import InputField from '../../FormFields/InputField';
+
+import './UserNameForm.css';
 
 export default function UserNameForm(props: any) {
     const {
@@ -13,12 +17,18 @@ export default function UserNameForm(props: any) {
                         Username
                     </Typography>
                     <Typography fontSize={16} variant='body1'>
-                        Enter a unique identifier for the user
+                        Enter a unique identifier for the customer
                     </Typography>
                 </Stack>
             </Grid>
             <Grid item xs={12} md={9}>
                 <InputField name={userName.name} fullWidth />
+                <Tooltip title={userName.suggestionMessage}>
+                    <InfoOutlinedIcon
+                        className={'info-icon'}
+                        fontSize='small'
+                    />
+                </Tooltip>
             </Grid>
         </Grid>
     );

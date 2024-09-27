@@ -41,20 +41,6 @@ p {
     color: var(--text-text-primary, #111) !important;
 }
 
-.bg-sandbox {
-    background: var(--colors-grey-gray-01, #fcfbfa);
-    border: 1px solid #b1ada6;
-    border-radius: 8px;
-}
-
-.custom-font-style {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 20px;
-    color: #111111;
-}
-
 iframe {
     @apply min-h-[105vh];
 }
@@ -65,7 +51,6 @@ iframe {
     }
 }
 
-/* -------------MuiAccordion---------------- */
 .MuiAccordion-root.custom-accordion::before {
     background-color: transparent;
 }
@@ -82,97 +67,23 @@ iframe {
     min-height: 0px !important;
 }
 
-.view-github__button:hover {
-    border: 2px solid #ffffff !important;
-}
-/* -------------account-info__label---------------- */
-.account-info__label {
-    width: 200px;
-    text-align: right;
-}
-
-/* -------------connect-form__button---------------- */
-.new-line {
-    white-space: pre-line;
-}
-
-.reset-demo__button {
-    border-radius: 30px !important;
-    margin-top: 20px !important;
-    padding: 10px 24px !important;
-    background-color: #fff !important;
-    color: #111 !important;
-    text-transform: none !important;
-    font-family: 'MarkForMC-Medium', sans-serif !important;
-}
-
-.connect-form__button {
-    border-radius: 30px !important;
-    margin-top: 15px !important;
+.css-1aquho2-MuiTabs-indicator {
     background-color: #2d7763 !important;
-    padding: 10px 24px !important;
-    color: #fff !important;
-    font-size: 14px !important;
-    line-height: 24px !important;
-    text-transform: none !important;
-    font-family: 'MarkForMC-Medium', sans-serif !important;
-}
-/* -------------modal-dialog---------------- */
-.modal-dialog-parent {
-    display: flex;
-    width: 462px;
-    padding: 40px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 80px;
 }
 
-.modal-dialog-content {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    height: 350px;
+.css-1hgnj26-MuiButtonBase-root-MuiTab-root.Mui-selected {
+    color: #2d7763 !important;
 }
 
-.ref-text {
-    font-size: 12px !important;
-    font-weight: 700 !important;
-    line-height: 16px !important;
-    letter-spacing: 1.8px;
-    text-transform: uppercase;
-    margin-bottom: 8px !important;
-    color: var(--text-text-primary, #111);
+.css-1xqtpac-MuiButtonBase-root-MuiToggleButton-root.Mui-selected {
+    color: #2d7763 !important;
+    font-weight: 600;
 }
 
-.open-bannking-text {
-    margin-bottom: 16px !important;
-    font-size: 24px !important;
-    font-weight: 400 !important;
-    line-height: 32px !important;
-    color: var(--text-text-primary, #111);
+.css-1hgnj26-MuiButtonBase-root-MuiTab-root {
+    width: 33%;
 }
 
-.demo__button {
-    border-radius: 30px !important;
-    background-color: #cf4500 !important;
-    padding: 10px 24px !important;
-    color: #ffffff !important;
-    text-transform: none !important;
-    font-family: 'MarkForMC-Medium', sans-serif !important;
-    font-size: 16px !important;
-    line-height: 24px !important;
-    font-weight: 500 !important;
-}
-
-.view-on-github__button {
-    border: 2px solid var(--surfaces-surface-button, #cf4500);
-    border-radius: 30px !important;
-    padding: 10px 24px !important;
-    color: #cf4500 !important;
-    border-color: #cf4500 !important;
-    text-transform: none !important;
-    font-family: 'MarkForMC-Medium', sans-serif !important;
-    font-size: 16px !important;
-    line-height: 24px !important;
-    font-weight: 500 !important;
+.css-rorn0c-MuiTableContainer-root {
+    margin-top: -2rem;
 }

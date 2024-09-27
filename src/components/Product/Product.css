@@ -1,0 +1,38 @@
+.arrow {
+    margin-bottom: 3px;
+    color: #f37338;
+}
+
+.curl-text {
+    color: #f37338;
+}
+
+.curl-text-close {
+    font-weight: normal;
+}
+
+.curl-text-open {
+    font-weight: bold;
+}
+
+.fetch_button_group {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
+
+.fetch_button {
+    border-radius: 5px !important;
+    background-color: #2d7763 !important;
+    padding: 10px 24px !important;
+    color: #fff !important;
+    font-size: 14px !important;
+    line-height: 24px !important;
+    min-width: 100px;
+    text-transform: none !important;
+    font-family: 'MarkForMC-Medium', sans-serif !important;
+}
+
+.disable_fetch_button {
+    opacity: 0.6;
+    cursor: not-allowed;
+}

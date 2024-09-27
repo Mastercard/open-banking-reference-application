@@ -1,5 +1,8 @@
 import { Card, CardContent, Typography } from '@mui/material';
 
+import './SandBoxTip.css';
+import data from './data';
+
 export default function SandBoxTip() {
     return (
         <Card className='mt-[40px] mb-[40px] rounded-lg !bg-gray-01 !shadow-none'>
@@ -9,7 +12,7 @@ export default function SandBoxTip() {
                 </Typography>
 
                 <Typography className='!mb-6 text-gray-700 text-base font-normal leading-5'>
-                    Please select FinBank and use the following username and password.
+                    {data.text.tip}
                 </Typography>
 
                 <div className='flex items-start'>
@@ -24,9 +27,11 @@ export default function SandBoxTip() {
 
                     <div className='flex flex-col items-start gap-4 w-1/3'>
                         <Typography className='mb-2 text-base !font-[700]'>
-                            Banking Userid
+                            {data.text.usernameField}
                         </Typography>
-                        <Typography className='text-base'>test</Typography>
+                        <Typography className='text-base'>
+                            {data.text.usernameValue}
+                        </Typography>
                     </div>
 
                     <div className='flex flex-col items-start gap-4 w-1/3'>
