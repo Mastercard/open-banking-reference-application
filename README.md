@@ -24,6 +24,7 @@
     7. [Explore usecases](#7-usecases)
 -   [Hosting Reference App](#hosting-reference-app)
 -   [Contact Us](#contact-us)
+
 ## Overview
 
 The Open Banking Reference App allows you to explore [Mastercard's Open Banking Service (MOBS)](https://developer.mastercard.com/open-banking-us/documentation/) to incorporate it into your product. This application allows you to:
