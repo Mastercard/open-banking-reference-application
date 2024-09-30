@@ -115,8 +115,6 @@ The Open Banking Reference App needs Sandbox API credentials adding to the `.env
     npm start
     ```
 
-    Open your browser to http://localhost:3000 to see the application up and running.
-
 -   ##### Run with docker
 
     **Pre-requisites** - Docker installed and running on your machine: https://docs.docker.com/get-docker/
@@ -127,9 +125,9 @@ The Open Banking Reference App needs Sandbox API credentials adding to the `.env
     docker compose up
     ```
 
-    Open your browser to http://localhost:4000 to see the application up and running.
+    Launch the web browser and navigate to http://localhost:4000 to view the application.
 
-    **Note:** if you want to update the docker image of reference app run command **docker compose build** followed by **docker compose up** to run your application with docker.
+    **Note:** To update the docker image for the reference application, execute the command `docker compose build`, followed by `docker compose up` to run application.
 
 When the application is launched in a browser, it prompts either to proceed with demo or go to GitHub. Select **View Demo**.
 This will redirect you to the first step of the user flow.
